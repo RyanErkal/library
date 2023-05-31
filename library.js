@@ -236,11 +236,7 @@ const restoreLocal = () => {
 
 // Utils
 
-/**
- * This function takes an array of Firestore documents and converts them to Book objects.
- * @param {Array.<DocumentSnapshot>} docs - An array of Firestore documents
- * @return {Array.<Book>} - An array of Book objects
- */
+// This function takes an array of book objects and returns an array of book documents.
 const docsToBooks = (docs) => {
 	return docs.map((doc) => {
 		return new Book(
@@ -253,7 +249,6 @@ const docsToBooks = (docs) => {
 };
 
 // This function takes a JSON object and returns a Book object containing the same data.
-
 const JSONToBook = (book) => {
 	return new Book(book.title, book.author, book.pages, book.isRead);
 };
